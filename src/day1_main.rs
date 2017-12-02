@@ -9,4 +9,3 @@ fn main() {
     println!("Part 1: {:?}", run(&input));
     println!("Part 2: {:?}", run2(&input));
 }
-
