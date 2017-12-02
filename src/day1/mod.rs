@@ -30,8 +30,7 @@ impl Numbers {
     fn count_numbers(&self) -> u32 {
         let res = self.0.as_slice().windows(2).fold(
             0_u32,
-            |acc, curr| if curr[0] ==
-                curr[1]
+            |acc, curr| if curr[0] == curr[1]
             {
                 acc + curr[0]
             } else {
