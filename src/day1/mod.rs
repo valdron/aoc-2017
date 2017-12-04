@@ -8,7 +8,7 @@ pub fn run(input: &str) -> Result<u32, String> {
 }
 
 pub fn run2(input: &str) -> Result<u32, String> {
-    let  n: Numbers = input.parse()?;
+    let n: Numbers = input.parse()?;
     let res = n.count_numbers2();
     Ok(res)
 }
@@ -30,7 +30,8 @@ impl Numbers {
     fn count_numbers(&self) -> u32 {
         let res = self.0.as_slice().windows(2).fold(
             0_u32,
-            |acc, curr| if curr[0] == curr[1]
+            |acc, curr| if curr[0] ==
+                curr[1]
             {
                 acc + curr[0]
             } else {
