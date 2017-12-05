@@ -10,7 +10,7 @@ pub fn run(input: &str) -> Result<u64, String> {
 pub fn run2(input: &str) -> Result<u64, String> {
     let xx: u64 = input.trim().parse().map_err(|e| format!("{:?}", e))?;
     let mut v = vec![((0, 0), 1)];
-    let mut circle = SpiralMem::new();
+    let circle = SpiralMem::new();
     for (x, y) in circle {
         let value = v.iter()
             .filter(|&&((x2, y2), _)| (x - x2).abs() <= 1 && (y - y2).abs() <= 1)
